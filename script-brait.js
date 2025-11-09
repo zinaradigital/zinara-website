@@ -441,6 +441,27 @@
         }
     };
 
+    // ============================================
+    // CONTACT FORM SUBMISSION
+    // ============================================
+    
+    window.submitForm = function(event) {
+        event.preventDefault();
+        const contactForm = document.getElementById('contactForm');
+        const successMessage = document.getElementById('successMessage');
+        
+        if (contactForm && successMessage) {
+            contactForm.classList.add('hidden');
+            successMessage.classList.remove('hidden');
+            
+            setTimeout(() => {
+                contactForm.classList.remove('hidden');
+                successMessage.classList.add('hidden');
+                event.target.reset();
+            }, 3000);
+        }
+    };
+
 })();
 
 // ============================================
