@@ -1,0 +1,910 @@
+<!DOCTYPE html>
+<html lang="en-KE">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Zinara Digital | Revenue Infrastructure Recovery Platform</title>
+  <meta name="description" content="Revenue fails after first contact. Zinara rebuilds infrastructure in 4 layers. 90-second response. 100% follow-up. +38% revenue increase average.">
+  
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  
+  <style>
+    :root {
+      --brand-primary: #f8cf40;
+      --brand-accent: #00043F;
+      --brand-dark: #000920;
+      --brand-gray: #8A8D91;
+      --text-primary: #0a0a0a;
+      --text-secondary: #666666;
+      --text-light: #ffffff;
+      --bg-primary: #ffffff;
+      --bg-secondary: #f8f9fa;
+      --bg-dark: #00043F;
+      --spacing-unit: 8px;
+      --max-width: 1280px;
+      --transition: 200ms ease;
+      --shadow-sm: 0 1px 3px rgba(0,0,0,0.08);
+      --shadow-md: 0 4px 12px rgba(0,0,0,0.1);
+      --shadow-lg: 0 12px 32px rgba(0,0,0,0.12);
+      --shadow-xl: 0 20px 48px rgba(0,0,0,0.15);
+    }
+    
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    
+    body {
+      font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+      font-size: 16px;
+      line-height: 1.6;
+      color: var(--text-primary);
+      background: var(--bg-primary);
+      -webkit-font-smoothing: antialiased;
+      -moz-osx-font-smoothing: grayscale;
+    }
+    
+    /* ========================================
+       HEADER NAVIGATION
+       ======================================== */
+    
+    .header {
+      position: fixed;
+      top: 0;
+      left: 0;
+      right: 0;
+      background: rgba(255, 255, 255, 0.98);
+      backdrop-filter: blur(12px);
+      border-bottom: 1px solid rgba(0, 0, 0, 0.06);
+      z-index: 1000;
+    }
+    
+    .header__container {
+      max-width: var(--max-width);
+      margin: 0 auto;
+      padding: 0 calc(var(--spacing-unit) * 4);
+      height: 72px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+    
+    .header__logo {
+      font-size: 28px;
+      font-weight: 800;
+      color: var(--brand-accent);
+      text-decoration: none;
+      letter-spacing: -0.5px;
+    }
+    
+    .header__nav {
+      display: flex;
+      align-items: center;
+      gap: calc(var(--spacing-unit) * 1);
+    }
+    
+    .nav__link {
+      padding: calc(var(--spacing-unit) * 1.5) calc(var(--spacing-unit) * 2.5);
+      color: var(--text-primary);
+      text-decoration: none;
+      font-weight: 500;
+      font-size: 15px;
+      border-radius: 6px;
+      transition: all var(--transition);
+    }
+    
+    .nav__link:hover {
+      background: rgba(0, 4, 63, 0.04);
+      color: var(--brand-accent);
+    }
+    
+    .nav__cta {
+      background: var(--brand-accent);
+      color: var(--text-light);
+      font-weight: 600;
+      padding: calc(var(--spacing-unit) * 1.75) calc(var(--spacing-unit) * 4);
+      margin-left: calc(var(--spacing-unit) * 2);
+    }
+    
+    .nav__cta:hover {
+      background: var(--brand-dark);
+      color: var(--text-light);
+      transform: translateY(-1px);
+      box-shadow: var(--shadow-md);
+    }
+    
+    /* ========================================
+       HERO SECTION
+       ======================================== */
+    
+    .hero {
+      padding-top: 144px;
+      padding-bottom: calc(var(--spacing-unit) * 16);
+      background: linear-gradient(135deg, #f8f9fa 0%, #ffffff 100%);
+      position: relative;
+      overflow: hidden;
+    }
+    
+    .hero::before {
+      content: '';
+      position: absolute;
+      top: -50%;
+      right: -20%;
+      width: 800px;
+      height: 800px;
+      background: radial-gradient(circle, rgba(248, 207, 64, 0.08) 0%, transparent 70%);
+      pointer-events: none;
+    }
+    
+    .hero__container {
+      max-width: var(--max-width);
+      margin: 0 auto;
+      padding: 0 calc(var(--spacing-unit) * 4);
+      position: relative;
+      z-index: 1;
+    }
+    
+    .hero__content {
+      max-width: 680px;
+      text-align: center;
+      margin: 0 auto;
+    }
+    
+    .hero__badge {
+      display: inline-flex;
+      align-items: center;
+      padding: calc(var(--spacing-unit) * 1) calc(var(--spacing-unit) * 2);
+      background: rgba(248, 207, 64, 0.12);
+      color: var(--brand-accent);
+      border-radius: 100px;
+      font-size: 13px;
+      font-weight: 600;
+      letter-spacing: 0.3px;
+      text-transform: uppercase;
+      margin-bottom: calc(var(--spacing-unit) * 3);
+    }
+    
+    .hero__headline {
+      font-size: clamp(40px, 6vw, 64px);
+      font-weight: 800;
+      line-height: 1.1;
+      letter-spacing: -1.5px;
+      color: var(--text-primary);
+      margin-bottom: calc(var(--spacing-unit) * 3);
+    }
+    
+    .hero__highlight {
+      background: linear-gradient(135deg, var(--brand-primary) 0%, #ffd700 100%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+    }
+    
+    .hero__subheadline {
+      font-size: 20px;
+      line-height: 1.6;
+      color: var(--text-secondary);
+      margin-bottom: calc(var(--spacing-unit) * 5);
+      max-width: 600px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+    
+    .hero__ctas {
+      display: flex;
+      gap: calc(var(--spacing-unit) * 2);
+      justify-content: center;
+      margin-bottom: calc(var(--spacing-unit) * 6);
+    }
+    
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      padding: calc(var(--spacing-unit) * 2.25) calc(var(--spacing-unit) * 5);
+      font-size: 16px;
+      font-weight: 600;
+      text-decoration: none;
+      border-radius: 8px;
+      transition: all var(--transition);
+      cursor: pointer;
+      border: none;
+    }
+    
+    .btn--primary {
+      background: var(--brand-accent);
+      color: var(--text-light);
+      box-shadow: var(--shadow-md);
+    }
+    
+    .btn--primary:hover {
+      background: var(--brand-dark);
+      transform: translateY(-2px);
+      box-shadow: var(--shadow-lg);
+    }
+    
+    .btn--secondary {
+      background: var(--bg-primary);
+      color: var(--brand-accent);
+      border: 2px solid var(--brand-accent);
+    }
+    
+    .btn--secondary:hover {
+      background: var(--brand-accent);
+      color: var(--text-light);
+      transform: translateY(-2px);
+      box-shadow: var(--shadow-md);
+    }
+    
+    .hero__stats {
+      display: flex;
+      gap: calc(var(--spacing-unit) * 6);
+      justify-content: center;
+    }
+    
+    .stat {
+      text-align: center;
+    }
+    
+    .stat__value {
+      font-size: 36px;
+      font-weight: 800;
+      color: var(--brand-accent);
+      line-height: 1;
+      margin-bottom: calc(var(--spacing-unit) * 1);
+    }
+    
+    .stat__label {
+      font-size: 14px;
+      color: var(--text-secondary);
+      font-weight: 500;
+    }
+    
+    /* ========================================
+       FEATURES SECTION
+       ======================================== */
+    
+    .features {
+      padding: calc(var(--spacing-unit) * 16) calc(var(--spacing-unit) * 4);
+      background: var(--bg-primary);
+    }
+    
+    .features__container {
+      max-width: var(--max-width);
+      margin: 0 auto;
+    }
+    
+    .section-header {
+      text-align: center;
+      margin-bottom: calc(var(--spacing-unit) * 8);
+    }
+    
+    .section-header__badge {
+      display: inline-block;
+      padding: calc(var(--spacing-unit) * 1) calc(var(--spacing-unit) * 2);
+      background: rgba(0, 4, 63, 0.06);
+      color: var(--brand-accent);
+      border-radius: 100px;
+      font-size: 13px;
+      font-weight: 600;
+      letter-spacing: 0.5px;
+      text-transform: uppercase;
+      margin-bottom: calc(var(--spacing-unit) * 2);
+    }
+    
+    .section-header__title {
+      font-size: clamp(32px, 4vw, 48px);
+      font-weight: 800;
+      line-height: 1.2;
+      letter-spacing: -1px;
+      color: var(--text-primary);
+      margin-bottom: calc(var(--spacing-unit) * 2);
+    }
+    
+    .section-header__subtitle {
+      font-size: 18px;
+      color: var(--text-secondary);
+      max-width: 600px;
+      margin: 0 auto;
+    }
+    
+    .features-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+      gap: calc(var(--spacing-unit) * 4);
+    }
+    
+    .feature-card {
+      padding: calc(var(--spacing-unit) * 5);
+      background: var(--bg-primary);
+      border: 1px solid rgba(0, 0, 0, 0.06);
+      border-radius: 12px;
+      transition: all var(--transition);
+    }
+    
+    .feature-card:hover {
+      border-color: var(--brand-primary);
+      box-shadow: var(--shadow-lg);
+      transform: translateY(-4px);
+    }
+    
+    .feature-card__icon {
+      width: 56px;
+      height: 56px;
+      background: linear-gradient(135deg, var(--brand-accent) 0%, var(--brand-dark) 100%);
+      border-radius: 12px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 28px;
+      margin-bottom: calc(var(--spacing-unit) * 3);
+    }
+    
+    .feature-card__title {
+      font-size: 22px;
+      font-weight: 700;
+      color: var(--text-primary);
+      margin-bottom: calc(var(--spacing-unit) * 1.5);
+    }
+    
+    .feature-card__description {
+      font-size: 15px;
+      line-height: 1.6;
+      color: var(--text-secondary);
+    }
+    
+    /* ========================================
+       LAYERS SECTION
+       ======================================== */
+    
+    .layers {
+      padding: calc(var(--spacing-unit) * 16) calc(var(--spacing-unit) * 4);
+      background: var(--bg-secondary);
+    }
+    
+    .layers__container {
+      max-width: var(--max-width);
+      margin: 0 auto;
+    }
+    
+    .layers-grid {
+      display: grid;
+      gap: calc(var(--spacing-unit) * 3);
+    }
+    
+    .layer-item {
+      display: grid;
+      grid-template-columns: auto 1fr;
+      gap: calc(var(--spacing-unit) * 4);
+      padding: calc(var(--spacing-unit) * 5);
+      background: var(--bg-primary);
+      border-radius: 16px;
+      border: 1px solid rgba(0, 0, 0, 0.06);
+      transition: all var(--transition);
+      text-decoration: none;
+      color: inherit;
+    }
+    
+    .layer-item:hover {
+      border-color: var(--brand-primary);
+      box-shadow: var(--shadow-xl);
+      transform: translateX(8px);
+    }
+    
+    .layer-item__number {
+      width: 72px;
+      height: 72px;
+      background: linear-gradient(135deg, var(--brand-primary) 0%, #ffd700 100%);
+      border-radius: 16px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 32px;
+      font-weight: 800;
+      color: var(--brand-accent);
+      flex-shrink: 0;
+    }
+    
+    .layer-item__content {
+      display: flex;
+      flex-direction: column;
+      gap: calc(var(--spacing-unit) * 1.5);
+    }
+    
+    .layer-item__title {
+      font-size: 28px;
+      font-weight: 700;
+      color: var(--text-primary);
+    }
+    
+    .layer-item__tagline {
+      font-size: 16px;
+      font-weight: 600;
+      color: var(--brand-accent);
+    }
+    
+    .layer-item__description {
+      font-size: 15px;
+      line-height: 1.6;
+      color: var(--text-secondary);
+    }
+    
+    .layer-item__arrow {
+      margin-left: auto;
+      color: var(--brand-accent);
+      font-size: 24px;
+      transition: transform var(--transition);
+    }
+    
+    .layer-item:hover .layer-item__arrow {
+      transform: translateX(4px);
+    }
+    
+    /* ========================================
+       METRICS SECTION
+       ======================================== */
+    
+    .metrics {
+      padding: calc(var(--spacing-unit) * 16) calc(var(--spacing-unit) * 4);
+      background: var(--bg-dark);
+      color: var(--text-light);
+    }
+    
+    .metrics__container {
+      max-width: var(--max-width);
+      margin: 0 auto;
+    }
+    
+    .metrics-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+      gap: calc(var(--spacing-unit) * 6);
+      margin-top: calc(var(--spacing-unit) * 8);
+    }
+    
+    .metric-card {
+      text-align: center;
+    }
+    
+    .metric-card__value {
+      font-size: 56px;
+      font-weight: 800;
+      color: var(--brand-primary);
+      line-height: 1;
+      margin-bottom: calc(var(--spacing-unit) * 2);
+    }
+    
+    .metric-card__label {
+      font-size: 16px;
+      color: rgba(255, 255, 255, 0.8);
+      font-weight: 500;
+    }
+    
+    /* ========================================
+       CTA SECTION
+       ======================================== */
+    
+    .cta-section {
+      padding: calc(var(--spacing-unit) * 16) calc(var(--spacing-unit) * 4);
+      background: linear-gradient(135deg, #f8f9fa 0%, #ffffff 100%);
+    }
+    
+    .cta-section__container {
+      max-width: 880px;
+      margin: 0 auto;
+      text-align: center;
+      padding: calc(var(--spacing-unit) * 8);
+      background: var(--bg-primary);
+      border-radius: 24px;
+      border: 1px solid rgba(0, 0, 0, 0.06);
+      box-shadow: var(--shadow-xl);
+    }
+    
+    .cta-section__title {
+      font-size: clamp(32px, 4vw, 48px);
+      font-weight: 800;
+      line-height: 1.2;
+      letter-spacing: -1px;
+      color: var(--text-primary);
+      margin-bottom: calc(var(--spacing-unit) * 2);
+    }
+    
+    .cta-section__subtitle {
+      font-size: 18px;
+      color: var(--text-secondary);
+      margin-bottom: calc(var(--spacing-unit) * 5);
+    }
+    
+    /* ========================================
+       FOOTER
+       ======================================== */
+    
+    .footer {
+      background: var(--bg-dark);
+      color: var(--text-light);
+      padding: calc(var(--spacing-unit) * 10) calc(var(--spacing-unit) * 4) calc(var(--spacing-unit) * 5);
+    }
+    
+    .footer__container {
+      max-width: var(--max-width);
+      margin: 0 auto;
+    }
+    
+    .footer__grid {
+      display: grid;
+      grid-template-columns: 2fr 1fr 1fr 1fr;
+      gap: calc(var(--spacing-unit) * 8);
+      margin-bottom: calc(var(--spacing-unit) * 8);
+    }
+    
+    .footer__brand {
+      font-size: 28px;
+      font-weight: 800;
+      color: var(--text-light);
+      margin-bottom: calc(var(--spacing-unit) * 2);
+    }
+    
+    .footer__tagline {
+      color: rgba(255, 255, 255, 0.7);
+      font-size: 15px;
+      line-height: 1.6;
+    }
+    
+    .footer__column-title {
+      font-size: 14px;
+      font-weight: 600;
+      color: var(--brand-primary);
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+      margin-bottom: calc(var(--spacing-unit) * 2);
+    }
+    
+    .footer__links {
+      list-style: none;
+      display: flex;
+      flex-direction: column;
+      gap: calc(var(--spacing-unit) * 1.5);
+    }
+    
+    .footer__link {
+      color: rgba(255, 255, 255, 0.7);
+      text-decoration: none;
+      font-size: 15px;
+      transition: color var(--transition);
+    }
+    
+    .footer__link:hover {
+      color: var(--brand-primary);
+    }
+    
+    .footer__bottom {
+      padding-top: calc(var(--spacing-unit) * 5);
+      border-top: 1px solid rgba(255, 255, 255, 0.1);
+      text-align: center;
+      color: rgba(255, 255, 255, 0.6);
+      font-size: 14px;
+    }
+    
+    /* ========================================
+       RESPONSIVE
+       ======================================== */
+    
+    @media (max-width: 768px) {
+      .header__nav {
+        display: none;
+      }
+      
+      .hero {
+        padding-top: 96px;
+        padding-bottom: calc(var(--spacing-unit) * 10);
+      }
+      
+      .hero__ctas {
+        flex-direction: column;
+      }
+      
+      .hero__stats {
+        flex-direction: column;
+        gap: calc(var(--spacing-unit) * 4);
+      }
+      
+      .features-grid {
+        grid-template-columns: 1fr;
+      }
+      
+      .layer-item {
+        grid-template-columns: 1fr;
+        text-align: center;
+      }
+      
+      .layer-item__number {
+        margin: 0 auto;
+      }
+      
+      .footer__grid {
+        grid-template-columns: 1fr;
+        gap: calc(var(--spacing-unit) * 6);
+      }
+    }
+  </style>
+</head>
+<body>
+  
+  <!-- Header -->
+  <header class="header">
+    <div class="header__container">
+      <a href="/" class="header__logo">Zinara</a>
+      <nav class="header__nav">
+        <a href="/system" class="nav__link">System</a>
+        <a href="/layers" class="nav__link">Layers</a>
+        <a href="/insights" class="nav__link">Insights</a>
+        <a href="/evidence" class="nav__link">Evidence</a>
+        <a href="/revenue-audit" class="nav__link nav__cta">Request Audit</a>
+      </nav>
+    </div>
+  </header>
+  
+  <!-- Hero -->
+  <section class="hero">
+    <div class="hero__container">
+      <div class="hero__content">
+        <div class="hero__badge">Revenue Infrastructure Platform</div>
+        <h1 class="hero__headline">
+          Revenue Dies After First Contact. <span class="hero__highlight">Infrastructure Recovers It.</span>
+        </h1>
+        <p class="hero__subheadline">
+          Zinara rebuilds revenue infrastructure in 4 sequential layers. Systematic diagnosis, AI capability training, automated workflows, continuous governance.
+        </p>
+        <div class="hero__ctas">
+          <a href="/revenue-audit" class="btn btn--primary">Request Free Diagnostic</a>
+          <a href="/system" class="btn btn--secondary">Explore System</a>
+        </div>
+        <div class="hero__stats">
+          <div class="stat">
+            <div class="stat__value">90 sec</div>
+            <div class="stat__label">Response Time</div>
+          </div>
+          <div class="stat">
+            <div class="stat__value">100%</div>
+            <div class="stat__label">Follow-Up Rate</div>
+          </div>
+          <div class="stat">
+            <div class="stat__value">+38%</div>
+            <div class="stat__label">Revenue Increase</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  
+  <!-- Features -->
+  <section class="features">
+    <div class="features__container">
+      <div class="section-header">
+        <div class="section-header__badge">How It Works</div>
+        <h2 class="section-header__title">Revenue Infrastructure Recovery</h2>
+        <p class="section-header__subtitle">
+          Systematic repair where manual systems leak revenue. Not marketing services. Infrastructure deployment.
+        </p>
+      </div>
+      <div class="features-grid">
+        
+        <div class="feature-card">
+          <div class="feature-card__icon">🎯</div>
+          <h3 class="feature-card__title">Diagnostic First</h3>
+          <p class="feature-card__description">
+            Map all failure points across marketing, AI adoption, automation, and governance. Identify which layer is failing before deployment.
+          </p>
+        </div>
+        
+        <div class="feature-card">
+          <div class="feature-card__icon">🤖</div>
+          <h3 class="feature-card__title">AI as Infrastructure</h3>
+          <p class="feature-card__description">
+            Teams don't manually use AI tools. AI operates autonomously as infrastructure, handling revenue workflows automatically.
+          </p>
+        </div>
+        
+        <div class="feature-card">
+          <div class="feature-card__icon">⚡</div>
+          <h3 class="feature-card__title">Automated Capture</h3>
+          <p class="feature-card__description">
+            WhatsApp, email, CRM unified in single system. 90-second response time. 100% follow-up rate. No lead lost to manual handling.
+          </p>
+        </div>
+        
+        <div class="feature-card">
+          <div class="feature-card__icon">📊</div>
+          <h3 class="feature-card__title">Real-Time Visibility</h3>
+          <p class="feature-card__description">
+            RevOps spine makes revenue measurable. Attribution mapped to every channel. Pipeline health monitored continuously.
+          </p>
+        </div>
+        
+        <div class="feature-card">
+          <div class="feature-card__icon">🔄</div>
+          <h3 class="feature-card__title">Process Automation</h3>
+          <p class="feature-card__description">
+            Approvals, scheduling, reporting handled automatically. Eliminates manual handoffs. Ensures consistency without human intervention.
+          </p>
+        </div>
+        
+        <div class="feature-card">
+          <div class="feature-card__icon">🛡️</div>
+          <h3 class="feature-card__title">Continuous Governance</h3>
+          <p class="feature-card__description">
+            Scheduled audits prevent system decay. Performance tracking ensures continuity. Infrastructure maintained systematically.
+          </p>
+        </div>
+        
+      </div>
+    </div>
+  </section>
+  
+  <!-- Layers -->
+  <section class="layers">
+    <div class="layers__container">
+      <div class="section-header">
+        <div class="section-header__badge">4-Layer System</div>
+        <h2 class="section-header__title">Sequential Dependencies. Order Enforced.</h2>
+        <p class="section-header__subtitle">
+          Each layer enables the next. Skipping dependencies causes system failure. No shortcuts allowed.
+        </p>
+      </div>
+      <div class="layers-grid">
+        
+        <a href="/digital-marketing-systems" class="layer-item">
+          <div class="layer-item__number">1</div>
+          <div class="layer-item__content">
+            <h3 class="layer-item__title">Digital Marketing Systems</h3>
+            <p class="layer-item__tagline">Marketing Activity Exists. Revenue Doesn't Follow.</p>
+            <p class="layer-item__description">
+              Layer 1 exposes where revenue fails between marketing activity and first contact. Audits campaigns, maps channels to revenue outcomes, installs capture infrastructure.
+            </p>
+          </div>
+          <span class="layer-item__arrow">→</span>
+        </a>
+        
+        <a href="/ai-integration" class="layer-item">
+          <div class="layer-item__number">2</div>
+          <div class="layer-item__content">
+            <h3 class="layer-item__title">AI Integration & Training</h3>
+            <p class="layer-item__tagline">Teams Don't Use AI. Infrastructure Deployment Blocked.</p>
+            <p class="layer-item__description">
+              Layer 2 builds operational capability required to operate Layer 3 infrastructure. 90%+ AI adoption within 30 days. Training prevents system decay.
+            </p>
+          </div>
+          <span class="layer-item__arrow">→</span>
+        </a>
+        
+        <a href="/ai-workflow-automation" class="layer-item">
+          <div class="layer-item__number">3</div>
+          <div class="layer-item__content">
+            <h3 class="layer-item__title">AI Workflow Automation</h3>
+            <p class="layer-item__tagline">Manual Systems Leak Revenue. AI Infrastructure Recovers It.</p>
+            <p class="layer-item__description">
+              AI deployed as infrastructure—not tools. Automates revenue workflows, business processes, lead handling. WhatsApp/email/CRM unified. 90-second response. 100% follow-up.
+            </p>
+          </div>
+          <span class="layer-item__arrow">→</span>
+        </a>
+        
+        <a href="/governance" class="layer-item">
+          <div class="layer-item__number">4</div>
+          <div class="layer-item__content">
+            <h3 class="layer-item__title">Governance</h3>
+            <p class="layer-item__tagline">Infrastructure Deployed. Governance Ensures Continuity.</p>
+            <p class="layer-item__description">
+              Layer 4 maintains system health through continuous monitoring. Scheduled audits, performance tracking, systematic maintenance prevent infrastructure decay.
+            </p>
+          </div>
+          <span class="layer-item__arrow">→</span>
+        </a>
+        
+      </div>
+    </div>
+  </section>
+  
+  <!-- Metrics -->
+  <section class="metrics">
+    <div class="metrics__container">
+      <div class="section-header">
+        <div class="section-header__badge" style="background: rgba(248, 207, 64, 0.12);">Performance Metrics</div>
+        <h2 class="section-header__title" style="color: var(--text-light);">
+          Revenue Recovered Through Systematic Repair
+        </h2>
+        <p class="section-header__subtitle" style="color: rgba(255, 255, 255, 0.8);">
+          Before & after infrastructure deployment. Data from B2B operators in Kenya.
+        </p>
+      </div>
+      <div class="metrics-grid">
+        <div class="metric-card">
+          <div class="metric-card__value">4 hrs → 90 sec</div>
+          <div class="metric-card__label">Response Time Improvement</div>
+        </div>
+        <div class="metric-card">
+          <div class="metric-card__value">30% → 100%</div>
+          <div class="metric-card__label">Follow-Up Rate Increase</div>
+        </div>
+        <div class="metric-card">
+          <div class="metric-card__value">+38%</div>
+          <div class="metric-card__label">Average Revenue Growth</div>
+        </div>
+        <div class="metric-card">
+          <div class="metric-card__value">90%+</div>
+          <div class="metric-card__label">AI Adoption Rate (30 days)</div>
+        </div>
+      </div>
+    </div>
+  </section>
+  
+  <!-- CTA Section -->
+  <section class="cta-section">
+    <div class="cta-section__container">
+      <h2 class="cta-section__title">Not Sure Which Layer Is Failing?</h2>
+      <p class="cta-section__subtitle">
+        Free 45-minute diagnostic. Identifies failure points across all 4 layers. Delivers priority sequence and roadmap. No sales theater.
+      </p>
+      <a href="/revenue-audit" class="btn btn--primary">Request Revenue Recovery Audit</a>
+    </div>
+  </section>
+  
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="footer__container">
+      <div class="footer__grid">
+        <div>
+          <div class="footer__brand">Zinara</div>
+          <p class="footer__tagline">
+            Revenue infrastructure recovery platform for B2B operators. Systematic repair where manual systems leak revenue.
+          </p>
+        </div>
+        <div>
+          <div class="footer__column-title">Platform</div>
+          <ul class="footer__links">
+            <li><a href="/system" class="footer__link">System Overview</a></li>
+            <li><a href="/layers" class="footer__link">4-Layer Architecture</a></li>
+            <li><a href="/evidence" class="footer__link">Evidence</a></li>
+            <li><a href="/insights" class="footer__link">Insights</a></li>
+          </ul>
+        </div>
+        <div>
+          <div class="footer__column-title">Layers</div>
+          <ul class="footer__links">
+            <li><a href="/digital-marketing-systems" class="footer__link">Layer 1: Digital Marketing</a></li>
+            <li><a href="/ai-integration" class="footer__link">Layer 2: AI Integration</a></li>
+            <li><a href="/ai-workflow-automation" class="footer__link">Layer 3: AI Workflows</a></li>
+            <li><a href="/governance" class="footer__link">Layer 4: Governance</a></li>
+          </ul>
+        </div>
+        <div>
+          <div class="footer__column-title">Contact</div>
+          <ul class="footer__links">
+            <li><a href="mailto:info@zinara.co.ke" class="footer__link">info@zinara.co.ke</a></li>
+            <li><a href="tel:+254798859452" class="footer__link">+254 798 859 452</a></li>
+            <li><a href="/revenue-audit" class="footer__link">Request Diagnostic</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer__bottom">
+        © 2026 Zinara Digital. All rights reserved. Revenue Infrastructure Recovery Platform.
+      </div>
+    </div>
+  </footer>
+  
+  <script>
+    // Analytics
+    window.dataLayer = window.dataLayer || [];
+    dataLayer.push({
+      'event': 'page_view',
+      'page_type': 'homepage',
+      'page_category': 'revenue_infrastructure',
+      'design_version': 'premium_enterprise'
+    });
+  </script>
+  
+</body>
+</html>
